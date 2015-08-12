@@ -1,0 +1,47 @@
+
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Django Girls blog * blah blah! happy django!</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static "css/blog.css" %}">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="">Django Girls Blog *^%%-00)(*$# </a></h1>
+        </div>
+
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% for post in posts %}
+                        <div class="post">
+                            <div class="date">
+                                {{ post.published_date }}
+                            </div>
+                            <h1><a href="">{{ post.title }}</a></h1>
+                            <p>{{ post.text|linebreaks }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
+#        <div>
+#            <p>published: 2015/08/11, 22:14</p>
+#            <h2><a href="">My hgkfkk post</a></h2>
+#            <p>甄嬛传 第57集 lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+#            <p>Hi there!</p>       
+#            <p>Stupid Will!!!!!</p>
+#            <p>It works!</p>
+#            <p>blah blah! happy django!!</p>
+#        </div>
+    </body>
+</html>
+
+
+
